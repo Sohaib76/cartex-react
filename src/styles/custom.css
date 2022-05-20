@@ -1,0 +1,78 @@
+body{
+    font-family: 'Roboto';
+    background: #eee;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+  }
+  input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+::-webkit-scrollbar {
+  width: 0px;
+   background: transparent;
+}
+.left {
+  position: absolute;
+  width: 150px;
+  top: 0;
+  left: -37px;
+  bottom: 0;
+  background: linear-gradient(to right , #eeeeee 20% , #eeeeee , #eeeeee 50%, #eeeeee54 90%, #eeeeee54);;
+  opacity: 1;
+}
+.right{
+  right: 0;
+  position: absolute;
+  width: 100px;
+  right: -10px;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to right , #eeeeee54 0% , #eeeeee54 10% , #eeeeee 50%, #eeeeee 20% , #eeeeee );;
+  opacity: 1;
+}
+.left1 {
+  position: absolute;
+  width: 30px;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to right , #eeeeee -3% , #eeeeee , #eeeeee, #eeeeee 70%, #eeeeee54);;
+  opacity: 0.9;
+}
+.leftcard {
+  position: absolute;
+  width: 150px;
+  top: 0;
+  left: -37px;
+  bottom: 0;
+  border-radius: 2px;
+  background: linear-gradient(to right , #eeeeee 20% , #eeeeee , #eeeeee 50%, #eeeeee54 90%, #eeeeee54);;
+  opacity: 1  ;
+}
+.rightcard{
+  right: 0;
+  position: absolute;
+  width: 150px;
+  border-radius: 2px;
+  top: 0;
+  right: -37px;
+  bottom: 0;
+  background: linear-gradient(to right , #eeeeee54 20% , #eeeeee54 30% , #eeeeee 40%, #eeeeee 80%, #eeeeee 120%);
+  opacity: 1;
+}
+.right1{
+  right: 0;
+  position: absolute;
+  width: 30px;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to right , #eeeeee54 0% , #eeeeee 50% , #eeeeee, #eeeeee 100% );;
+  opacity: 0.9;
+}
+.flickity-slider {
+  left: 120px !important;
+}
