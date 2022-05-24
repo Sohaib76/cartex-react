@@ -58,12 +58,14 @@ function PrivacyPolicy() {
             through email address provided on our website and/ or Mobile
             Application.
           </p>
-          <p className="text-[#F47521] md:text-xl text-base font-bold">1. DEFINITIONS</p>
+          <p className="text-[#F47521] md:text-xl text-base font-bold">
+            1. DEFINITIONS
+          </p>
           <p className="md:text-xl text-base">
             Unless otherwise provided in this Privacy Policy, the terms
             capitalized in the Privacy Policy shall have the meaning as provided
             hereun{" "}
-          </p >
+          </p>
           <p className="md:text-xl text-base">
             1.1 “Services” shall have the meaning of implementing the “Booking
             and/or Order” as previously defined.
@@ -80,14 +82,31 @@ function PrivacyPolicy() {
             1.4 “Mobile Application” shall mean application provided by us on
             the Device to access the Service.
           </p>
-          <p className="md:text-xl text-base">1.5 “Mobile Device Information” shall mean the information we receive from the device which includes details, orders/bookings, updates and uploads.</p>
-          <p className="md:text-xl text-base">1.6 “Promotion” shall mean any contest and other promotions offered by us.</p>
-          <p className="md:text-xl text-base">1.7 “Protected Information” shall mean such categories of information that could reasonably be used to identify you personally, including your name, e-mail address, Id Proof and mobile number.</p>
-          <p className="md:text-xl text-base">1.8 “TPSP” shall mean a third party service provider.</p>
-          <p className="md:text-xl text-base">1.9 “Usage Information” shall mean the information we receive about the customer or you.</p>
+          <p className="md:text-xl text-base">
+            1.5 “Mobile Device Information” shall mean the information we
+            receive from the device which includes details, orders/bookings,
+            updates and uploads.
+          </p>
+          <p className="md:text-xl text-base">
+            1.6 “Promotion” shall mean any contest and other promotions offered
+            by us.
+          </p>
+          <p className="md:text-xl text-base">
+            1.7 “Protected Information” shall mean such categories of
+            information that could reasonably be used to identify you
+            personally, including your name, e-mail address, Id Proof and mobile
+            number.
+          </p>
+          <p className="md:text-xl text-base">
+            1.8 “TPSP” shall mean a third party service provider.
+          </p>
+          <p className="md:text-xl text-base">
+            1.9 “Usage Information” shall mean the information we receive about
+            the customer or you.
+          </p>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

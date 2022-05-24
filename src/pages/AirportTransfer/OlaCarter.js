@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
@@ -955,24 +955,43 @@ function OlaCarter() {
       name: "Zimbabwe",
     },
   ];
-  let number=[]
-  number=[...Array(99).keys()]
+  let number = [];
+  number = [...Array(99).keys()];
   const navigate = useNavigate();
   const [type, setType] = React.useState(2);
   const [types, setTypes] = React.useState(0);
-  const [toggler, setToggler] = useState(false)
-  const [toggler1, setToggler1] = useState(false)
-  const [toggler2, setToggler2] = useState(false)
-  const [toggler3, setToggler3] = useState(false)
-  const [toggler4, setToggler4] = useState(false)
+  const [toggler, setToggler] = useState(false);
+  const [toggler1, setToggler1] = useState(false);
+  const [toggler2, setToggler2] = useState(false);
+  const [toggler3, setToggler3] = useState(false);
+  const [toggler4, setToggler4] = useState(false);
   const [toggler6, setToggler6] = useState(false);
-  const time1 = ["7 Am - 11 AM", "11 AM - 3 PM","3 Pm - 7 PM", "7 PM - 12 AM","4 AM - 7 AM"];
-  const toggle= ['10 bags','12 bags', '15 bags','20 bags'];
-  const city= ['Banglore', 'New Dehli'];
-  const airports= ['KIAL Banglore', 'New Dehli'];
-  const time= ['9:00 pm', '10:00 pm'];
-  const date= ['Thursday, 28 October, 2021','Friday, 29 October, 2021', 'Saturday, 30 October, 2021','Sunday, 31 October, 2021'];
-  const address=['Banglore, kanataka,India',"Banglore cantonmet Railway Station","Banglore cantonmet Railway Station","Banglore cantonmet Railway Station","Banglore cantonmet Railway Station","Banglore cantonmet Railway Station","Banglore cantonmet Railway Station"];
+  const time1 = [
+    "7 Am - 11 AM",
+    "11 AM - 3 PM",
+    "3 Pm - 7 PM",
+    "7 PM - 12 AM",
+    "4 AM - 7 AM",
+  ];
+  const toggle = ["10 bags", "12 bags", "15 bags", "20 bags"];
+  const city = ["Banglore", "New Dehli"];
+  const airports = ["KIAL Banglore", "New Dehli"];
+  const time = ["9:00 pm", "10:00 pm"];
+  const date = [
+    "Thursday, 28 October, 2021",
+    "Friday, 29 October, 2021",
+    "Saturday, 30 October, 2021",
+    "Sunday, 31 October, 2021",
+  ];
+  const address = [
+    "Banglore, kanataka,India",
+    "Banglore cantonmet Railway Station",
+    "Banglore cantonmet Railway Station",
+    "Banglore cantonmet Railway Station",
+    "Banglore cantonmet Railway Station",
+    "Banglore cantonmet Railway Station",
+    "Banglore cantonmet Railway Station",
+  ];
   return (
     <>
       <div className="bg-white flex flex-col md:w-4/5 w-full mt-2 py-2 px-2  ">
@@ -1025,7 +1044,9 @@ function OlaCarter() {
         </div>
         <div className="mt-3 flex flex-col lg:flex-row lg:gap-2 gap-7 ">
           <div className="flex flex-col justify-between md:py-2 rounded-lg border-[#CCCCCC]  border-2  px-2 w-full lg:w-1/2">
-            <div className="text-xs lg:text-[15px] text-[#F47521] font-bold">Name</div>
+            <div className="text-xs lg:text-[15px] text-[#F47521] font-bold">
+              Name
+            </div>
             <input
               className="outline-0 w-full font-bold text-lg lg:text-lg border-[#fff] "
               placeholder="Enter Name"
@@ -1039,13 +1060,14 @@ function OlaCarter() {
             <div className="flex flex-row">
               <span className="flex flex-col justify-between md:py-2  border-[1px] rounded-lg border-[#F47521] text-sm p-1 ">
                 <label className="text-[#F47521]" for="phonecode">
-                  <select className="bg-none" style={{background:"none",backgroundColor:"none"}} id="phonecode">
-                  {
-                      countries.map((item,index)=>(
-                        
-                        <option value={item.code}>{item.code}</option>
-                      ))
-                    }
+                  <select
+                    className="bg-none"
+                    style={{ background: "none", backgroundColor: "none" }}
+                    id="phonecode"
+                  >
+                    {countries.map((item, index) => (
+                      <option value={item.code}>{item.code}</option>
+                    ))}
                   </select>
                 </label>
               </span>
@@ -1058,7 +1080,9 @@ function OlaCarter() {
         </div>
         <div className="mt-7 flex flex-col lg:flex-row lg:gap-2 gap-7 ">
           <div className="flex flex-col justify-between md:py-2  rounded-lg border-[#CCCCCC]  border-2  px-2 w-full lg:w-1/2">
-            <div className="text-xs lg:text-[15px] text-[#F47521] pb-2 font-bold">Email</div>
+            <div className="text-xs lg:text-[15px] text-[#F47521] pb-2 font-bold">
+              Email
+            </div>
             <input
               className="outline-0 w-full font-bold text-lg lg:text-lg border-[#fff] "
               placeholder="Enter Email Address"
@@ -1077,10 +1101,17 @@ function OlaCarter() {
         <div className="mt-7 flex flex-col lg:flex-row lg:gap-2 gap-7 ">
           <div className="relative rounded-lg border-[#CCCCCC] py-2 border-2  px-2 w-full lg:w-1/2">
             <div className="flex flex-row justify-between">
-              <div className="text-xs lg:text-[15px] text-[#F47521] font-bold">Bags</div>
+              <div className="text-xs lg:text-[15px] text-[#F47521] font-bold">
+                Bags
+              </div>
               <KeyboardArrowDownIcon className="text-[#F47521]" />
             </div>
-            <SelectBoxs setToggler={setToggler} toggler={toggler} toggle={toggle} data={ 'Select Bags'}/>
+            <SelectBoxs
+              setToggler={setToggler}
+              toggler={toggler}
+              toggle={toggle}
+              data={"Select Bags"}
+            />
             <h2 className="text-xs text-[#CCCCCC]">Check in Bags up to 25kg</h2>
           </div>
           <div className="relative rounded-lg border-[#CCCCCC] py-2 border-2  px-2 w-full lg:w-1/2">
@@ -1090,17 +1121,21 @@ function OlaCarter() {
               </div>
               <KeyboardArrowDownIcon className="text-[#F47521]" />
             </div>
-            <SelectBoxs setToggler={setToggler1} toggler={toggler1} toggle={date} data={'Select Date'} />
-            
-           <div className="flex flex-row gap-2 relative">
-
-              <SelectBox
-              setToggler={setToggler6}
-              toggler={toggler6}
-              toggle={time1}
-              data={"Select Time Slot"}
-              topp={true}
+            <SelectBoxs
+              setToggler={setToggler1}
+              toggler={toggler1}
+              toggle={date}
+              data={"Select Date"}
             />
+
+            <div className="flex flex-row gap-2 relative">
+              <SelectBox
+                setToggler={setToggler6}
+                toggler={toggler6}
+                toggle={time1}
+                data={"Select Time Slot"}
+                topp={true}
+              />
               <KeyboardArrowDownIcon className="text-[#1A7DC1] absolute left-[92px] -top-[4px]" />
             </div>
           </div>
@@ -1119,7 +1154,13 @@ function OlaCarter() {
               </div>
               <KeyboardArrowDownIcon className="text-[#F47521]" />
             </div>
-            <SelectBoxs setToggler={setToggler2} toggler={toggler2} toggle={airports} data={'Arrival Terminal'} topp={true} />
+            <SelectBoxs
+              setToggler={setToggler2}
+              toggler={toggler2}
+              toggle={airports}
+              data={"Arrival Terminal"}
+              topp={true}
+            />
           </div>
           <div className="relative rounded-lg border-[#CCCCCC] py-2 border-2  px-2 w-full lg:w-1/2">
             <div className="flex flex-row justify-between">
@@ -1128,7 +1169,12 @@ function OlaCarter() {
               </div>
               <KeyboardArrowDownIcon className="text-[#F47521]" />
             </div>
-            <SelectAddress toggle={address} toggler={toggler3} setToggler={setToggler3} data={'Select Address'} />
+            <SelectAddress
+              toggle={address}
+              toggler={toggler3}
+              setToggler={setToggler3}
+              data={"Select Address"}
+            />
           </div>
         </div>
         {/* details */}

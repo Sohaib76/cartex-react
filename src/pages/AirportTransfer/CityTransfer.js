@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
@@ -10,28 +10,46 @@ import SelectBoxs from "../../component/SelectBoxs";
 import SelectAddress from "../../component/SelectAddress";
 import SelectBox from "../../component/SelectBox";
 
-
 function CityTransfer() {
-  let number=[]
-  number=[...Array(99).keys()]
+  let number = [];
+  number = [...Array(99).keys()];
   const navigate = useNavigate();
   const [type, setType] = React.useState(1);
   const [types, setTypes] = React.useState(0);
   const [active, setActive] = React.useState(0);
-  const [toggler, setToggler] = useState(false)
-  const [toggler1, setToggler1] = useState(false)
-  const [toggler2, setToggler2] = useState(false)
-  const [toggler3, setToggler3] = useState(false)
-  const [toggler4, setToggler4] = useState(false)  
+  const [toggler, setToggler] = useState(false);
+  const [toggler1, setToggler1] = useState(false);
+  const [toggler2, setToggler2] = useState(false);
+  const [toggler3, setToggler3] = useState(false);
+  const [toggler4, setToggler4] = useState(false);
   const [toggler6, setToggler6] = useState(false);
-  const time1 = ["7 Am - 11 AM", "11 AM - 3 PM","3 Pm - 7 PM", "7 PM - 12 AM","4 AM - 7 AM"];
+  const time1 = [
+    "7 Am - 11 AM",
+    "11 AM - 3 PM",
+    "3 Pm - 7 PM",
+    "7 PM - 12 AM",
+    "4 AM - 7 AM",
+  ];
 
-  const toggle= ['10 bags','12 bags', '15 bags','20 bags'];
-  const city= ['Banglore', 'New Dehli'];
-  const airports= ['KIAL Banglore', 'New Dehli'];
-  const time= ['9:00 pm', '10:00 pm'];
-  const date= ['Thursday, 28 October, 2021','Friday, 29 October, 2021', 'Saturday, 30 October, 2021','Sunday, 31 October, 2021'];
-  const address=['Banglore, kanataka,India',"Banglore cantonmet Railway Station","Banglore cantonmet Railway Station","Banglore cantonmet Railway Station","Banglore cantonmet Railway Station","Banglore cantonmet Railway Station","Banglore cantonmet Railway Station"];
+  const toggle = ["10 bags", "12 bags", "15 bags", "20 bags"];
+  const city = ["Banglore", "New Dehli"];
+  const airports = ["KIAL Banglore", "New Dehli"];
+  const time = ["9:00 pm", "10:00 pm"];
+  const date = [
+    "Thursday, 28 October, 2021",
+    "Friday, 29 October, 2021",
+    "Saturday, 30 October, 2021",
+    "Sunday, 31 October, 2021",
+  ];
+  const address = [
+    "Banglore, kanataka,India",
+    "Banglore cantonmet Railway Station",
+    "Banglore cantonmet Railway Station",
+    "Banglore cantonmet Railway Station",
+    "Banglore cantonmet Railway Station",
+    "Banglore cantonmet Railway Station",
+    "Banglore cantonmet Railway Station",
+  ];
   const countries = [
     {
       code: "+7 840",
@@ -1004,18 +1022,33 @@ function CityTransfer() {
             </button>
           </div>
         </div>
-        {
-          types===1 && <>
-          <hr className="w-full my-6" />
-          <div className="border-2 w-full rounded-full flex flex-row  h-[40px]   ">
-                <button className={`w-1/2 outline-0 text-center rounded-full flex flex-row font-bold py-5 justify-center items-center gap-2 text-base  ${type===1 && '!text-white !bg-[#F47521] '}`} onClick={()=>{setType(1)}}>
-                  <h3>To Service City</h3>
-                </button>
-                <button className={`w-1/2 outline-0 text-center rounded-full flex flex-row font-bold py-5 justify-center items-center gap-2 text-base ${type===2 && '!text-white !bg-[#F47521] '}`} onClick={()=>{setType(2)}}>
-                  <h3>From Service City</h3>
-                </button>
-              </div></>
-        }
+        {types === 1 && (
+          <>
+            <hr className="w-full my-6" />
+            <div className="border-2 w-full rounded-full flex flex-row  h-[40px]   ">
+              <button
+                className={`w-1/2 outline-0 text-center rounded-full flex flex-row font-bold py-5 justify-center items-center gap-2 text-base  ${
+                  type === 1 && "!text-white !bg-[#F47521] "
+                }`}
+                onClick={() => {
+                  setType(1);
+                }}
+              >
+                <h3>To Service City</h3>
+              </button>
+              <button
+                className={`w-1/2 outline-0 text-center rounded-full flex flex-row font-bold py-5 justify-center items-center gap-2 text-base ${
+                  type === 2 && "!text-white !bg-[#F47521] "
+                }`}
+                onClick={() => {
+                  setType(2);
+                }}
+              >
+                <h3>From Service City</h3>
+              </button>
+            </div>
+          </>
+        )}
         <div className="mt-7 flex flex-col lg:flex-row lg:gap-2 gap-7">
           <div className="flex flex-col justify-between md:py-2 rounded-lg border-[#CCCCCC]  border-2  px-2 w-full lg:w-1/3">
             <div className="text-sm lg:text-[15px] text-[#F47521] font-bold">
@@ -1034,13 +1067,14 @@ function CityTransfer() {
             <div className="flex flex-row">
               <span className="border-[1px] rounded-lg border-[#F47521] text-sm p-1 ">
                 <label className="text-[#F47521]" for="phonecode">
-                  <select className="bg-none" style={{background:"none",backgroundColor:"none"}} id="phonecode">
-                  {
-                      countries.map((item,index)=>(
-                        
-                        <option value={item.code}>{item.code}</option>
-                      ))
-                    }
+                  <select
+                    className="bg-none"
+                    style={{ background: "none", backgroundColor: "none" }}
+                    id="phonecode"
+                  >
+                    {countries.map((item, index) => (
+                      <option value={item.code}>{item.code}</option>
+                    ))}
                   </select>
                 </label>
               </span>
@@ -1062,14 +1096,18 @@ function CityTransfer() {
         </div>
         <div className="mt-7 flex flex-col lg:flex-row lg:gap-2 gap-7 ">
           <div className="relative rounded-lg border-[#CCCCCC] flex flex-col justify-between py-2 border-2  px-2 w-full lg:w-1/2">
-          <div className="flex flex-row justify-between">
+            <div className="flex flex-row justify-between">
               <div className="text-sm lg:text-[15px] text-[#F47521] font-bold">
                 Bags
               </div>
               <KeyboardArrowDownIcon className="text-[#F47521]" />
             </div>
-            <SelectBoxs setToggler={setToggler} toggler={toggler} toggle={toggle} data={ 'Select Bags'}/>
-
+            <SelectBoxs
+              setToggler={setToggler}
+              toggler={toggler}
+              toggle={toggle}
+              data={"Select Bags"}
+            />
           </div>
 
           <div className="relative rounded-lg border-[#CCCCCC] py-2 border-2  px-2 w-full lg:w-1/2">
@@ -1085,9 +1123,8 @@ function CityTransfer() {
               toggle={date}
               data={"Select Date"}
             />
-            
+
             <div className="flex flex-row gap-2 relative">
-             
               <SelectBox
                 setToggler={setToggler6}
                 toggler={toggler6}
@@ -1108,38 +1145,45 @@ function CityTransfer() {
         {types === 0 ? (
           <div className="mt-3 flex flex-col lg:flex-row gap-2 ">
             <div className="flex flex-col w-full gap-2 lg:w-1/2">
-          <div className="relative rounded-lg border-[#CCCCCC] py-2 border-2  px-2 ">
-            <div className="flex flex-row justify-between">
-              <div className="text-xs lg:text-[15px] text-[#F47521] font-bold">
-                Pickup Address
+              <div className="relative rounded-lg border-[#CCCCCC] py-2 border-2  px-2 ">
+                <div className="flex flex-row justify-between">
+                  <div className="text-xs lg:text-[15px] text-[#F47521] font-bold">
+                    Pickup Address
+                  </div>
+                  <KeyboardArrowDownIcon className="text-[#F47521]" />
+                </div>
+                <SelectAddress
+                  toggle={address}
+                  toggler={toggler3}
+                  setToggler={setToggler3}
+                  data={"Select Address"}
+                />
               </div>
-              <KeyboardArrowDownIcon className="text-[#F47521]" />
-                 </div>
-                 <SelectAddress toggle={address} toggler={toggler3} setToggler={setToggler3} data={'Select Address'} />
-            </div>
-            <div className=" flex flex-row items-center justify-start gap-2 lg:w-full my-2 whitespace-nowrap">
-              <InfoOutlinedIcon className="text-[#FF0000]" />
-              <h3 className="text-xs">All pins are serviceable</h3>
-            </div>
-          </div>  
-          <div className="flex flex-col gap-2 w-full lg:w-1/2">
-         <div className="relative rounded-lg border-[#CCCCCC] py-2 border-2  px-2 ">
-            <div className="flex flex-row justify-between">
-              <div className="text-xs lg:text-[15px] text-[#F47521] font-bold">
-                Drop Address
+              <div className=" flex flex-row items-center justify-start gap-2 lg:w-full my-2 whitespace-nowrap">
+                <InfoOutlinedIcon className="text-[#FF0000]" />
+                <h3 className="text-xs">All pins are serviceable</h3>
               </div>
-              <KeyboardArrowDownIcon className="text-[#F47521]" />
             </div>
-            <SelectAddress toggle={address} toggler={toggler4} setToggler={setToggler4} data={'Select Address'} />
-          </div>
-          <div className=" flex flex-row items-center justify-start gap-2 lg:w-full my-2 whitespace-nowrap">
-            <InfoOutlinedIcon className="text-[#FF0000]" />
-            <h3 className="text-xs">
-            Please enter the vaid code
-
-            </h3>
-          </div>
-         </div>
+            <div className="flex flex-col gap-2 w-full lg:w-1/2">
+              <div className="relative rounded-lg border-[#CCCCCC] py-2 border-2  px-2 ">
+                <div className="flex flex-row justify-between">
+                  <div className="text-xs lg:text-[15px] text-[#F47521] font-bold">
+                    Drop Address
+                  </div>
+                  <KeyboardArrowDownIcon className="text-[#F47521]" />
+                </div>
+                <SelectAddress
+                  toggle={address}
+                  toggler={toggler4}
+                  setToggler={setToggler4}
+                  data={"Select Address"}
+                />
+              </div>
+              <div className=" flex flex-row items-center justify-start gap-2 lg:w-full my-2 whitespace-nowrap">
+                <InfoOutlinedIcon className="text-[#FF0000]" />
+                <h3 className="text-xs">Please enter the vaid code</h3>
+              </div>
+            </div>
           </div>
         ) : (
           <div className="mt-3 flex flex-col lg:flex-row gap-2 ">
@@ -1156,10 +1200,18 @@ function CityTransfer() {
                 )}
                 <KeyboardArrowDownIcon className="text-[#F47521]" />
               </div>
-              <select className="bg-none outline-0 w-full font-bold text-lg lg:text-lg border-[#fff] cursor-pointer " style={{WebkitAppearance:"none", MozAppearance:"none",background:"none",backgroundColor:"none"}} >
-              <option value="+1">Bangalore</option>
-              <option value="+1">New Dehli</option>
-            </select>
+              <select
+                className="bg-none outline-0 w-full font-bold text-lg lg:text-lg border-[#fff] cursor-pointer "
+                style={{
+                  WebkitAppearance: "none",
+                  MozAppearance: "none",
+                  background: "none",
+                  backgroundColor: "none",
+                }}
+              >
+                <option value="+1">Bangalore</option>
+                <option value="+1">New Dehli</option>
+              </select>
             </div>
             <div className="rounded-lg border-[#CCCCCC] py-2 border-2  px-2 w-full lg:w-1/2">
               <div className="flex flex-row justify-between">
@@ -1174,35 +1226,59 @@ function CityTransfer() {
                 )}
                 <KeyboardArrowDownIcon className="text-[#F47521]" />
               </div>
-              <select className="bg-none outline-0 w-full font-bold text-lg lg:text-lg border-[#fff] cursor-pointer " style={{WebkitAppearance:"none", MozAppearance:"none",background:"none",backgroundColor:"none"}} >
-            <option disabled selected value> Fill /provide drop address</option>
-              <option value="+1">KIAL Bangalore</option>
-              <option value="+1">New Dehli</option>
-            </select>
+              <select
+                className="bg-none outline-0 w-full font-bold text-lg lg:text-lg border-[#fff] cursor-pointer "
+                style={{
+                  WebkitAppearance: "none",
+                  MozAppearance: "none",
+                  background: "none",
+                  backgroundColor: "none",
+                }}
+              >
+                <option disabled selected value>
+                  {" "}
+                  Fill /provide drop address
+                </option>
+                <option value="+1">KIAL Bangalore</option>
+                <option value="+1">New Dehli</option>
+              </select>
             </div>
           </div>
         )}
-        {
-          type===2&& <div className="mt-3 flex flex-row gap-2 ">
-          <div className="rounded-lg border-[#CCCCCC] py-2 border-2  px-2 w-full lg:w-1/2">
-            <div className="flex flex-row justify-between">
-                {
-                    type===2? <div className="text-sx lg:text-[15px] text-[#F47521] font-bold">
+        {type === 2 && (
+          <div className="mt-3 flex flex-row gap-2 ">
+            <div className="rounded-lg border-[#CCCCCC] py-2 border-2  px-2 w-full lg:w-1/2">
+              <div className="flex flex-row justify-between">
+                {type === 2 ? (
+                  <div className="text-sx lg:text-[15px] text-[#F47521] font-bold">
                     Delivery Address
-                  </div>: <div className="text-xs lg:text-[15px] text-[#F47521] font-bold">
-                Drop Address
+                  </div>
+                ) : (
+                  <div className="text-xs lg:text-[15px] text-[#F47521] font-bold">
+                    Drop Address
+                  </div>
+                )}
+                <KeyboardArrowDownIcon className="text-[#F47521]" />
               </div>
-                }
-              <KeyboardArrowDownIcon className="text-[#F47521]" />
+              <select
+                className="bg-none outline-0 w-full font-bold text-lg lg:text-lg border-[#fff] cursor-pointer "
+                style={{
+                  WebkitAppearance: "none",
+                  MozAppearance: "none",
+                  background: "none",
+                  backgroundColor: "none",
+                }}
+              >
+                <option disabled selected value>
+                  {" "}
+                  Fill /provide drop address
+                </option>
+                <option value="+1">KIAL Bangalore</option>
+                <option value="+1">New Dehli</option>
+              </select>
             </div>
-            <select className="bg-none outline-0 w-full font-bold text-lg lg:text-lg border-[#fff] cursor-pointer " style={{WebkitAppearance:"none", MozAppearance:"none",background:"none",backgroundColor:"none"}} >
-            <option disabled selected value> Fill /provide drop address</option>
-              <option value="+1">KIAL Bangalore</option>
-              <option value="+1">New Dehli</option>
-            </select>
           </div>
-        </div>
-        }
+        )}
 
         {/* coupon section */}
         <div className="mt-3 flex flex-col lg:flex-row gap-3 ">

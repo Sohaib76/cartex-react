@@ -45,7 +45,7 @@ function CargoTransfer() {
     "Banglore cantonmet Railway Station",
     "Banglore cantonmet Railway Station",
   ];
- const countries = [
+  const countries = [
     {
       code: "+7 840",
       name: "Abkhazia",
@@ -1054,15 +1054,14 @@ function CargoTransfer() {
             <div className="flex flex-row">
               <span className="border-[1px] rounded-lg border-[#F47521] text-sm p-1 ">
                 <label className="text-[#F47521]" for="phonecode">
-                  <select 
+                  <select
                     className="bg-none"
-                    style={{ background: "none", backgroundColor: "none"}}
+                    style={{ background: "none", backgroundColor: "none" }}
                     id="phonecode"
                   >
-                    {
-                      countries.map((item, index) => (
-                        <option value={item.code}>{item.code}</option>
-                      ))}
+                    {countries.map((item, index) => (
+                      <option value={item.code}>{item.code}</option>
+                    ))}
                   </select>
                 </label>
               </span>
@@ -1112,7 +1111,6 @@ function CargoTransfer() {
               data={"Select Date"}
             />
             <div className="flex flex-row gap-2 relative">
-
               <SelectBox
                 setToggler={setToggler6}
                 toggler={toggler6}

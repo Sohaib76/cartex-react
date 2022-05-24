@@ -29,7 +29,7 @@ function Contact() {
                     <div className="bg-[#F47521] border-0 mb-2 md:mb-5 mx-auto bottom-2 w-[120px] md:w-[250px] lg:w-[250px]   p-1 "></div>
 
                     <div className="visible">
-                    Feel free to contact us for all your queries
+                      Feel free to contact us for all your queries
                     </div>
                   </div>
                   <div className=" flex flex-col mt-7 gap-2">
@@ -188,97 +188,103 @@ function Contact() {
           {smallScreen ? (
             <>
               <div className="w-11/12 md:w-10/12 mx-auto">
-              <div className="w-full my-2">
-                <div className="w-full md:w-8/12 mx-auto flex flex-col gap-4 rounded-2xl shadow-2xl bg-white p-4  ">
-                  <h3 className="font-bold text-[32px] text-center ">
-                    Have a Query?
-                  </h3>
-                  <div className="flex flex-col gap-2 border-2 rounded-xl p-2 border-[#CCCCCC]">
-                    <div className="text-[#F47521] font-bold text-sm">Name</div>
-                    <input
-                      className="outline-0 text-xl"
-                      type="text"
-                      placeholder="Enter your name"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2 border-2 rounded-xl p-2 border-[#CCCCCC]">
-                    <div className="text-[#F47521] font-bold text-sm">
-                      Email
+                <div className="w-full my-2">
+                  <div className="w-full md:w-8/12 mx-auto flex flex-col gap-4 rounded-2xl shadow-2xl bg-white p-4  ">
+                    <h3 className="font-bold text-[32px] text-center ">
+                      Have a Query?
+                    </h3>
+                    <div className="flex flex-col gap-2 border-2 rounded-xl p-2 border-[#CCCCCC]">
+                      <div className="text-[#F47521] font-bold text-sm">
+                        Name
+                      </div>
+                      <input
+                        className="outline-0 text-xl"
+                        type="text"
+                        placeholder="Enter your name"
+                      />
                     </div>
-                    <input
-                      className="outline-0 text-xl"
-                      type="text"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2 border-2 rounded-xl p-2 border-[#CCCCCC]">
-                    <div className="text-[#F47521] font-bold text-sm">Name</div>
-                    <textarea
-                      className="outline-0 text-xl h-[150px]"
-                      placeholder="Write your query here"
-                    />
-                  </div>
-                  <div className="bg-[#F47521] w-8/12 rounded-full py-2  mx-auto">
-                    <p className="text-center text-[#FFFFFF] font-bold text-lg">
-                      Submit Query
-                    </p>
+                    <div className="flex flex-col gap-2 border-2 rounded-xl p-2 border-[#CCCCCC]">
+                      <div className="text-[#F47521] font-bold text-sm">
+                        Email
+                      </div>
+                      <input
+                        className="outline-0 text-xl"
+                        type="text"
+                        placeholder="Enter your email"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-2 border-2 rounded-xl p-2 border-[#CCCCCC]">
+                      <div className="text-[#F47521] font-bold text-sm">
+                        Name
+                      </div>
+                      <textarea
+                        className="outline-0 text-xl h-[150px]"
+                        placeholder="Write your query here"
+                      />
+                    </div>
+                    <div className="bg-[#F47521] w-8/12 rounded-full py-2  mx-auto">
+                      <p className="text-center text-[#FFFFFF] font-bold text-lg">
+                        Submit Query
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
               </div>
             </>
           ) : (
             <>
-            <div className="w-11/12 md:w-10/12 mx-auto">
-            <div className="flex flex-col justify-center items-center ">
-                <div className="flex flex-row gap-2 items-center">
-                  <h3 className="text-[36px] font-bold">Position at Airport</h3>
-                  <InfoIcon />
+              <div className="w-11/12 md:w-10/12 mx-auto">
+                <div className="flex flex-col justify-center items-center ">
+                  <div className="flex flex-row gap-2 items-center">
+                    <h3 className="text-[36px] font-bold">
+                      Position at Airport
+                    </h3>
+                    <InfoIcon />
+                  </div>
+                  <h4 className="text-2xl font-baseline">Find us here</h4>
                 </div>
-                <h4 className="text-2xl font-baseline">Find us here</h4>
+                <div className="flex flex-col gap-3">
+                  <h3 className="text-4xl font-bold">Airport Transfer</h3>
+                </div>
               </div>
-              <div className="flex flex-col gap-3">
-                <h3 className="text-4xl font-bold">Airport Transfer</h3>
-              </div>
-            </div>
 
               <div className=" relative w-full">
                 <PackagesSection />
                 <div className="absolute leftcard blur-lg"></div>
-    <div className="absolute rightcard blur-lg"></div>
+                <div className="absolute rightcard blur-lg"></div>
               </div>
               <div className="w-11/12 md:w-10/12 mx-auto">
-              <div className="w-full mt-5 mb-2">
-                <h2 className="text-[36px] pt-4 pb-5 font-bold">
-                  City Transfer
-                </h2>
-                <div className="flex flex-row gap-2  flex-wrap  justify-around">
-                  <div className="bg-white flex flex-col px-2 py-3 w-[240px] rounded-3xl shadow-xl">
-                    <img src={city1} />
-                    <h4 className="font-bold text-2xl text-center pt-2">
-                      Banglore
-                    </h4>
-                  </div>{" "}
-                  <div className="bg-white flex flex-col px-2 py-3 w-[240px] rounded-3xl shadow-xl">
-                    <img src={city2} />
-                    <h4 className="font-bold text-2xl text-center pt-2">
-                      Hyderabad
-                    </h4>
-                  </div>{" "}
-                  <div className="bg-white flex flex-col px-2 py-3 w-[240px] rounded-3xl shadow-xl">
-                    <img src={city3} />
-                    <h4 className="font-bold text-2xl text-center pt-2">
-                      Mumbai
-                    </h4>
-                  </div>{" "}
-                  <div className="bg-white flex flex-col px-2 py-3 w-[240px] rounded-3xl shadow-xl">
-                    <img src={city4} />
-                    <h4 className="font-bold text-2xl text-center pt-2">
-                      New Dehli
-                    </h4>
+                <div className="w-full mt-5 mb-2">
+                  <h2 className="text-[36px] pt-4 pb-5 font-bold">
+                    City Transfer
+                  </h2>
+                  <div className="flex flex-row gap-2  flex-wrap  justify-around">
+                    <div className="bg-white flex flex-col px-2 py-3 w-[240px] rounded-3xl shadow-xl">
+                      <img src={city1} />
+                      <h4 className="font-bold text-2xl text-center pt-2">
+                        Banglore
+                      </h4>
+                    </div>{" "}
+                    <div className="bg-white flex flex-col px-2 py-3 w-[240px] rounded-3xl shadow-xl">
+                      <img src={city2} />
+                      <h4 className="font-bold text-2xl text-center pt-2">
+                        Hyderabad
+                      </h4>
+                    </div>{" "}
+                    <div className="bg-white flex flex-col px-2 py-3 w-[240px] rounded-3xl shadow-xl">
+                      <img src={city3} />
+                      <h4 className="font-bold text-2xl text-center pt-2">
+                        Mumbai
+                      </h4>
+                    </div>{" "}
+                    <div className="bg-white flex flex-col px-2 py-3 w-[240px] rounded-3xl shadow-xl">
+                      <img src={city4} />
+                      <h4 className="font-bold text-2xl text-center pt-2">
+                        New Dehli
+                      </h4>
+                    </div>
                   </div>
                 </div>
-              </div>
               </div>
             </>
           )}

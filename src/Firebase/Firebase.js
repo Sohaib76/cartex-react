@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: "cartex-web-6e213",
   storageBucket: "cartex-web-6e213.appspot.com",
   messagingSenderId: "198472961765",
-  appId: "1:198472961765:web:316f63285deb2a3ebb4e0c"
+  appId: "1:198472961765:web:316f63285deb2a3ebb4e0c",
 };
 
 // Initialize Firebase

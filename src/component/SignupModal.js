@@ -5,8 +5,8 @@ import cartex from "./UI/modalpics/Cartex.png";
 import closebtn from "../component/UI/modalpics/closebtnn.png";
 import { useNavigate } from "react-router-dom";
 const SignupModal = (props) => {
-  let number=[]
-  number=[...Array(99).keys()]
+  let number = [];
+  number = [...Array(99).keys()];
   const countries = [
     {
       code: "+7 840",
@@ -983,12 +983,9 @@ const SignupModal = (props) => {
               <span className="border-[1px]    rounded-lg border-[#F47521] text-sm p-1 ">
                 <label className="text-[#F47521]" for="phonecode">
                   <select id="phonecode">
-                  {
-                      countries.map((item,index)=>(
-                        
-                        <option value={item.code}>{item.code}</option>
-                      ))
-                    }
+                    {countries.map((item, index) => (
+                      <option value={item.code}>{item.code}</option>
+                    ))}
                   </select>
                 </label>
               </span>

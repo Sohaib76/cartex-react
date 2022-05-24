@@ -4,13 +4,13 @@ import { useMediaQuery } from "@mui/material";
 import Home from "./Home";
 
 function AirportTransfer() {
-  const [step,setStep]=React.useState(0);
-  const matches = useMediaQuery('(max-width:768px)');
+  const [step, setStep] = React.useState(0);
+  const matches = useMediaQuery("(max-width:768px)");
 
-  console.log("steps",step);
-  return (<>
-    <Home/>
-  
+  console.log("steps", step);
+  return (
+    <>
+      <Home />
     </>
   );
 }

@@ -14,11 +14,10 @@ import { useNavigate } from "react-router-dom";
 import SelectBoxs from "../../component/SelectBoxs";
 import SelectAddress from "../../component/SelectAddress";
 import SelectBox from "../../component/SelectBox";
-import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
-function  LocalAirport({ step, setStep }) {
-  let number=[]
-  number=[ ...Array(99).keys()]
+import "react-phone-number-input/style.css";
+function LocalAirport({ step, setStep }) {
+  let number = [];
+  number = [...Array(99).keys()];
   const navigate = useNavigate();
   const [type, setType] = React.useState(1);
   const [types, setTypes] = React.useState(0);
@@ -33,7 +32,13 @@ function  LocalAirport({ step, setStep }) {
   const [toggler4, setToggler4] = useState(false);
   const [toggler5, setToggler5] = useState(false);
   const [toggler6, setToggler6] = useState(false);
-  const time1 = ["7 Am - 11 AM", "11 AM - 3 PM","3 Pm - 7 PM", "7 PM - 12 AM","4 AM - 7 AM"];
+  const time1 = [
+    "7 Am - 11 AM",
+    "11 AM - 3 PM",
+    "3 Pm - 7 PM",
+    "7 PM - 12 AM",
+    "4 AM - 7 AM",
+  ];
   const toggle = ["10 bags", "12 bags", "15 bags", "20 bags"];
   const city = ["Banglore", "New Dehli"];
   const airports = ["KIAL Banglore", "New Dehli"];
@@ -1075,12 +1080,9 @@ function  LocalAirport({ step, setStep }) {
                     style={{ background: "none", backgroundColor: "none" }}
                     id="phonecode"
                   >
-                     {
-                      countries.map((item,index)=>(
-                        
-                        <option value={item.code}>{item.code}</option>
-                      ))
-                    }
+                    {countries.map((item, index) => (
+                      <option value={item.code}>{item.code}</option>
+                    ))}
                   </select>
                 </label>
               </span>
@@ -1132,12 +1134,12 @@ function  LocalAirport({ step, setStep }) {
 
             <div className="flex flex-row lg:gap-2 gap-7 relative">
               <SelectBox
-              setToggler={setToggler6}
-              toggler={toggler6}
-              toggle={time1}
-              data={"Select Time Slot"}
-              topp={true}
-            />
+                setToggler={setToggler6}
+                toggler={toggler6}
+                toggle={time1}
+                data={"Select Time Slot"}
+                topp={true}
+              />
               <KeyboardArrowDownIcon className="text-[#1A7DC1] absolute left-[92px] -top-[4px]" />
             </div>
           </div>
@@ -1175,16 +1177,19 @@ function  LocalAirport({ step, setStep }) {
           <div className="flex flex-col lg:gap-2 gap-7 lg:w-1/4  w-full">
             <div className="relative rounded-lg lg:h-[72px] border-[#CCCCCC] py-2 border-2  px-2 ">
               <div className="flex flex-row justify-between">
-                {types === 1 ?  <div>
-                  {
-                  type ===1?(<div className="text-xs lg:text-[15px] text-[#F47521] font-bold">
-                  Delivery City
-                </div>):(<div className="text-xs lg:text-[15px] text-[#F47521] font-bold">
-                    Arrival City
-                  </div>)
-                }</div>
-                  
-                 : (
+                {types === 1 ? (
+                  <div>
+                    {type === 1 ? (
+                      <div className="text-xs lg:text-[15px] text-[#F47521] font-bold">
+                        Delivery City
+                      </div>
+                    ) : (
+                      <div className="text-xs lg:text-[15px] text-[#F47521] font-bold">
+                        Arrival City
+                      </div>
+                    )}
+                  </div>
+                ) : (
                   <div className="text-xs lg:text-[15px] text-[#F47521] font-bold">
                     Select City of Service
                   </div>
@@ -1200,25 +1205,30 @@ function  LocalAirport({ step, setStep }) {
                 topp={true}
               />
             </div>
-            {types===1&&  
-            <div>
-              {
-                type === 1 ? (
+            {types === 1 && (
+              <div>
+                {type === 1 ? (
                   <div className=" flex flex-row items-center justify-start lg:gap-2 gap-7 lg:w-full my-2 whitespace-nowrap">
                     <InfoOutlinedIcon className="text-[#FF0000]" />
-                    <h3 className="text-xs">Delivery may take 4 days minimum</h3>
+                    <h3 className="text-xs">
+                      Delivery may take 4 days minimum
+                    </h3>
                   </div>
                 ) : (
                   <div className=" flex flex-row items-center justify-start lg:gap-2 gap-7 lg:w-full my-2 whitespace-nowrap">
                     <InfoOutlinedIcon className="text-[#FF0000]" />
                     <div className="flex flex-col">
-                    <h3 className="text-xs">Delivery may take minimum 4 days.</h3>
-                    <h3 className="text-xs">Delivery to NE & JK will take longer</h3>
+                      <h3 className="text-xs">
+                        Delivery may take minimum 4 days.
+                      </h3>
+                      <h3 className="text-xs">
+                        Delivery to NE & JK will take longer
+                      </h3>
                     </div>
                   </div>
-                )
-              }
-            </div>}
+                )}
+              </div>
+            )}
           </div>
 
           <div className="relative lg:h-[72px] rounded-lg border-[#CCCCCC] py-2 border-2  px-2 w-full lg:w-1/4">
@@ -1263,7 +1273,7 @@ function  LocalAirport({ step, setStep }) {
                 data={"Select Address"}
               />
             </div>
-            {type=== 2 ? (
+            {type === 2 ? (
               <div className=" flex flex-row items-center justify-start lg:gap-2 gap-7 lg:w-full my-2 whitespace-nowrap">
                 <InfoOutlinedIcon className="text-[#FF0000]" />
                 <h3 className="text-xs">We Deliver Anywhere in India</h3>
